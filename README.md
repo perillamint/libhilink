@@ -10,4 +10,5 @@ Licensed under MPL 2.0
 * Support additional api
 
 ## Note
-https://godoc.org/github.com/knq/hilink
+* https://godoc.org/github.com/knq/hilink
+* https://blog.hqcodeshop.fi/archives/259-Huawei-E5186-AJAX-API.html
