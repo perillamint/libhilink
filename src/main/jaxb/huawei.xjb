@@ -1,0 +1,24 @@
+<jaxb:bindings
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+        jaxb:extensionBindingPrefixes="xjc"
+        version="2.1">
+<!--
+    <jaxb:globalBindings generateIsSetMethod="true" fixedAttributeAsConstantProperty="true">
+        <xjc:serializable uid="1" />
+    </jaxb:globalBindings>
+-->
+    <jaxb:bindings schemaLocation="../schema/status.xsd">
+        <jaxb:bindings node="//xs:element[@name='response']">
+            <jaxb:class name="Status"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../schema/token.xsd">
+        <jaxb:class name="Token"/>
+        <jaxb:bindings node="//xs:element[@name='response']">
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+</jaxb:bindings>

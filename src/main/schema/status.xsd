@@ -1,0 +1,38 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:short" name="ConnectionStatus"/>
+                <xs:element type="xs:short" name="WifiConnectionStatus"/>
+                <xs:element type="xs:string" name="SignalStrength"/>
+                <xs:element type="xs:byte" name="SignalIcon"/>
+                <xs:element type="xs:byte" name="CurrentNetworkType"/>
+                <xs:element type="xs:byte" name="CurrentServiceDomain"/>
+                <xs:element type="xs:byte" name="RoamingStatus"/>
+                <xs:element type="xs:byte" name="BatteryStatus"/>
+                <xs:element type="xs:byte" name="BatteryLevel"/>
+                <xs:element type="xs:byte" name="BatteryPercent"/>
+                <xs:element type="xs:byte" name="simlockStatus"/>
+                <xs:element type="xs:string" name="PrimaryDns"/>
+                <xs:element type="xs:string" name="SecondaryDns"/>
+                <xs:element type="xs:string" name="PrimaryIPv6Dns"/>
+                <xs:element type="xs:string" name="SecondaryIPv6Dns"/>
+                <xs:element type="xs:byte" name="CurrentWifiUser"/>
+                <xs:element type="xs:byte" name="TotalWifiUser"/>
+                <xs:element type="xs:byte" name="currenttotalwifiuser"/>
+                <xs:element type="xs:byte" name="ServiceStatus"/>
+                <xs:element type="xs:byte" name="SimStatus"/>
+                <xs:element type="xs:byte" name="WifiStatus"/>
+                <xs:element type="xs:byte" name="CurrentNetworkTypeEx"/>
+                <xs:element type="xs:byte" name="WanPolicy"/>
+                <xs:element type="xs:byte" name="maxsignal"/>
+                <xs:element type="xs:byte" name="wifiindooronly"/>
+                <xs:element type="xs:byte" name="wififrequence"/>
+                <xs:element type="xs:string" name="classify"/>
+                <xs:element type="xs:byte" name="flymode"/>
+                <xs:element type="xs:byte" name="cellroam"/>
+                <xs:element type="xs:byte" name="usbup"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
