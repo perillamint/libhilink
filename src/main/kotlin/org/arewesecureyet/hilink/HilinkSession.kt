@@ -119,7 +119,7 @@ class HilinkSession {
         return this.post(path, bodyXML, clazz, brokenAPI)
     }
 
-    fun login(username: String, password: String) {
+    fun login(username: String, password: String): AuthenticationResponse {
         val loginState = this.get("api/user/state-login", LoginStateResponse::class.java)
         if (loginState.externPasswordType == 1) {
             val challengeRequest = LoginChallengeRequest()
@@ -140,7 +140,7 @@ class HilinkSession {
             authRequest.clientProof = proof
             authRequest.finalNonce = challenge.serverNonce!!
 
-            val authResult: AuthenticationResponse = this.post(
+            return this.post(
                 "/api/user/authentication_login",
                 authRequest,
                 AuthenticationRequest::class.java,
