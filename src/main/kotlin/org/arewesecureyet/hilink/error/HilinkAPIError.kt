@@ -1,6 +1,6 @@
 package org.arewesecureyet.hilink.error
 
-class HilinkAPIError: HilinkError {
+open class HilinkAPIError: HilinkError {
     val code: Int
 
     constructor(code: Int, msg: String): super("Error $code - $msg") {

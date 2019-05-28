@@ -2,7 +2,7 @@ package org.arewesecureyet.hilink
 
 import okhttp3.*
 import org.arewesecureyet.hilink.crypto.SCRAM
-import org.arewesecureyet.hilink.error.HilinkAPIError
+import org.arewesecureyet.hilink.error.HilinkAPIErrorFactory
 import org.arewesecureyet.hilink.error.HilinkAuthenticationError
 import org.arewesecureyet.hilink.xmlobject.response.*
 import org.arewesecureyet.hilink.xmlobject.request.*
@@ -68,7 +68,7 @@ class HilinkSession {
             if (res.msg == "") {
                 res.msg = "Unknown"
             }
-            throw HilinkAPIError(res.code ?: 0, res.msg ?: "Unknown")
+            throw HilinkAPIErrorFactory.getHilinkAPIError(res.code ?: 0)
         } else {
             @Suppress("UNCHECKED_CAST")
             return res as T
